@@ -14,9 +14,8 @@
 % that explains the effects of social distancing which the code was inspired from .
 
 % ------------------------------------------------------
-% Author: Chris Milliner, JPL, Caltech, 
-% christopher.milliner@jpl.nasa.gov
-% https://science.jpl.nasa.gov/people/Milliner/
+% Author: Chris Milliner
+% geomilliner@gmail.com
 
 % Log: Created 03/22/20
 % ------------------------------------------------------
