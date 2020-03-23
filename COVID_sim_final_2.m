@@ -59,9 +59,9 @@ domain_height = abs(top_extent_domain - bot_extent_domain);
 x_vecs = rand(Num_people,1)*domain_width-domain_width/2;
 y_vecs = rand(Num_people,1)*domain_height-domain_height/2;
 
-% randomize velocities with uniform distribution
-velo_vecs_x = rand(Num_people,1)*Velocity_factor;
-velo_vecs_y = rand(Num_people,1)*Velocity_factor;
+% randomize velocities with normal distribution
+velo_vecs_x = randn(Num_people,1)*Velocity_factor;
+velo_vecs_y = randn(Num_people,1)*Velocity_factor;
 
 %-------------------
 % Social distancing 
@@ -191,8 +191,8 @@ for time_t = 1:dt:Num_time_steps
     elseif time_t/Num_time_steps >= Time_stop_Social_dist && ~First_time
         % first time, then need to randomize velocities of those just
         % realeased from S.D.
-        velo_vecs_x(rand_indx_peeps_SD) = rand(length(rand_indx_peeps_SD),1)*Velocity_factor;
-        velo_vecs_y(rand_indx_peeps_SD) = rand(length(rand_indx_peeps_SD),1)*Velocity_factor;
+        velo_vecs_x(rand_indx_peeps_SD) = randn(length(rand_indx_peeps_SD),1)*Velocity_factor;
+        velo_vecs_y(rand_indx_peeps_SD) = randn(length(rand_indx_peeps_SD),1)*Velocity_factor;
         
         First_time = 1;       
         rand_indx_peeps_SD = [];% remove vars so wont affect collision 
